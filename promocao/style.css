@@ -1,0 +1,227 @@
+
+@media screen and (min-device-width:1300px){
+    body, h1, h2, h3, h4, h5, h6, p, div, ul, ol, li{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container{
+        width: 1200px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    header{
+        background-color: purple;
+        height: 400px;
+        width: 100%;
+    }
+    
+    #containerProdutoDestaque{
+        height: 500px;
+        width: 100%;
+        padding: 50px;
+        padding-top: 60px;
+        box-sizing: border-box;
+        
+    }
+    
+    .produtoSecundario{
+        height: 200px;
+        width: 240px;
+        float: left;
+        background-color: aqua;
+        margin-right: 20px;
+        margin-top: 100px;
+    }
+    
+    #produtoDestaque{
+        height: 400px;
+        width: 550px;
+        background-color: aqua;
+        margin-right: 20px;
+        float: left;
+    }
+    
+    #titulo{
+        height: 100px;
+        width: 100%;
+        background-color: darkblue;
+    }
+    
+    #containerPromocaoDoDia{
+        min-height: 250px;
+        height: auto;
+        width: 100%;
+        background-color: gray;
+        overflow: hidden;
+        padding: 20px;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+    
+    .promocaoDia{
+        height: 330px;
+        width: 250px;
+        background-color: rgb(173, 128, 4);
+        margin-right: 20px;
+        float: left;
+    }
+    
+    .nome{
+        height: 50px;
+        width: 100%;
+        border-bottom: 2px solid #110;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-top: 14px;
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 20px;
+        color: aliceblue;
+    }
+    
+    .imgProduto{
+        height: 130px;
+        width: 200px;
+        background-color: rgba(90, 252, 3,0.5);
+        margin-left: 25px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .comprar{
+        height: 50px;
+        width: 170px;
+        background-color: green;
+        margin-left: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-top: 14px;
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 20px;
+    }
+    
+    .detalhes{
+        height: 40px;
+        width: 220px;
+        border: 1px solid blue;
+        margin-left: 15px;
+        text-align: center;
+        padding-top: 8px;
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 20px;
+        
+    }    
+}
+@media screen and (max-device-width:780px){
+    body, h1, h2, h3, h4, h5, h6, p, div, ul, ol, li{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    header{
+        background-color: purple;
+        height: 400px;
+        width: 100%;
+    }
+    
+    #containerProdutoDestaque{
+        height: 800px;
+        width: 100%;  
+    }
+    
+    .produtoSecundario{
+        height: 200px;
+        width: 100%;
+        background-color: aqua;
+    }
+    
+    #produtoDestaque{
+        height: 400px;
+        width: 100%;
+        background-color: aqua;
+    }
+    
+    #titulo{
+        height: 100px;
+        width: 100%;
+        background-color: darkblue;
+    }
+    
+    #containerPromocaoDoDia{
+        min-height: 250px;
+        height: auto;
+        width: 100%;
+        background-color: gray;
+        overflow: hidden;
+        padding: 20px;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+    
+    .promocaoDia{
+        height: 330px;
+        width: 250px;
+        margin-top: 5px;
+        background-color: rgb(173, 128, 4);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .nome{
+        height: 50px;
+        width: 100%;
+        border-bottom: 2px solid #110;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-top: 14px;
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 20px;
+        color: aliceblue;
+    }
+    
+    .imgProduto{
+        height: 130px;
+        width: 200px;
+        background-color: rgba(90, 252, 3,0.5);
+        margin-left: 25px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .comprar{
+        height: 50px;
+        width: 170px;
+        background-color: green;
+        margin-left: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-top: 14px;
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 20px;
+    }
+    
+    .detalhes{
+        height: 40px;
+        width: 220px;
+        border: 1px solid blue;
+        margin-left: 15px;
+        text-align: center;
+        padding-top: 8px;
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 20px;
+        
+    }    
+}
