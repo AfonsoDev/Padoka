@@ -1,10 +1,6 @@
-<!-----------------PHP CODIGO -------------->
 <?php 
-
 require_once("functions/HFsite/HFsite.php");
-
 ?>
-<!-----------------HTML CODIGO -------------->
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -18,6 +14,13 @@ require_once("functions/HFsite/HFsite.php");
             $(document).ready(function(){
                 $('.iconeMobile').click(function(){
                     $('.menuMobile').fadeToggle(1000)});
+                });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $('.submenuleftmobile').click(function(){
+                    $('.submenu').fadeToggle(1000)});
                 });
         </script>
         
@@ -37,21 +40,14 @@ require_once("functions/HFsite/HFsite.php");
             </div>
         </header>
         <?php echo(menuleft());?>
-            <section class="container">
-                <div class="rightContainer">
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                    <?php echo(divProdutoPao());?>
-                      
-                </div>
-                <div>
-                    <?php echo(redesSociais());?>
+            <section>
+                <div class="container">
+                    <div class="rightContainer">
+                        <?php echo(divProdutoPao());?>
+                    </div>
+                    <div>
+                        <?php echo(redesSociais());?>
+                    </div>
                 </div>
             </section>
         <?php echo(rodape());  ?>
@@ -59,19 +55,19 @@ require_once("functions/HFsite/HFsite.php");
         <div class="modal-bg">
             <div class="modal">
                 <h2>Ensira seus dados</h2>
-                <form method='POST' class='' name=''>  
+                <form method='POST' class='' name='frm_entrar'>  
                     <div class=''>
                         <div class='form-group'>
                             <div>
                                 <label>Usuario:</label>
                             </div>
-                        <input type='text' name='' class='inputedit' placeholder='Usuario'>
+                        <input type='text' name='txtusuario' class='inputedit' placeholder='Usuario'>
                     </div>
                     <div class='form-group'>
                         <div>
                             <label>Senha:</label>
                         </div>
-                            <input type='password' name='' class='inputedit' placeholder='Senha'>
+                            <input type='password' name='txtsenha' class='inputedit' placeholder='Senha'>
                     </div>
                             <input type='submit' value='Ok' class='btn_Entrar'>
                     </div>

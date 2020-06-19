@@ -57,9 +57,10 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title> Contato </title>
+        <title>Padoka | Entre em contato </title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="shortcut icon" href="../img/icons/pudim.png" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
@@ -71,26 +72,27 @@
 <!-- --------       Extrutura body ----------------->
     
         <div class="contato_frm">
-            <form class="" name="frm_Contato" action="#" method="post">
-                <input type="text" class="input" placeholder="Nome" name="txtName" required autocomplete="off" data-js="name">
+            <form class="" name="frm_Contato" action="#" method="post" autocomplete="off">
+                <input type="text" class="input" placeholder="Nome" name="txtName" autocomplete="off" required data-js="name">
                     <div>
-                         <input type="tel" class="input" placeholder="Telefone" name="txtTelefone" required autocomplete="off" data-js="telefone">
+                         <input type="tel"  autocomplete="off" class="input" placeholder="Telefone" name="txtTelefone" required  data-js="telefone">
                             <div>
-                                <input type="tel" class="input" placeholder="Celular" name="txtCelular" required autocomplete="off" data-js="celular">
+                                <input type="tel" class="input" placeholder="Celular" name="txtCelular" required  data-js="celular">
                                  <div>
                                 <input type="email" class="input" placeholder="Email" name="txtEmail" required autocomplete="off">
                                      <div>
-                                         <input type="url" class="input" placeholder="Home Page" name="txtHomePage" autocomplete="off" required>
+                                         <input type="url" class="input" placeholder="Home Page" name="txtHomePage"  required>
                                          
                                          <div>
                                             <input type="url" class="input" placeholder="Link Facebook" name="txtFacebook" autocomplete="off" required>
                                                <div class="">
-                                                    <select class="select_form" name="slcSugestaoCritica" required>
+                                                    <select class="select_form" name="slcSugestaoCritica">
                                                         <option value="0" selected disabled>Selecione uma opção</option>
                                                         <?php
                                                             $sql = "select * from tblsugestaocritica order by opcao";
                                                                 
                                                            $selectSugestaoCritica =  mysqli_query($conex, $sql);
+                                                           
                                                            while($rsSugestaoCritica = mysqli_fetch_assoc($selectSugestaoCritica))
                                                            {
                                                            ?>
@@ -99,16 +101,13 @@
                                                            <?php
                                                            }
                                                            ?>
-                                                        
-                                                        
-                                                        
-                                                            <div class="obsBox">
-                                                                <textarea autocomplete="off" class="obstxt" name="txtObs" cols="50" rows="7"></textarea>
-                                                            </div>
                                                     </select>    
                                                </div>
+                                               <div class="obsBox">
+                                                                <textarea autocomplete="off" class="obstxt" name="txtObs" cols="50" rows="7"></textarea>
+                                                            </div>
                                              
-                                             <div class="text-center" required>
+                                             <div class="text-center">
                                                 <span class="texteditone">Sexo :</span>   
                                                 <input class="radio texteditone" name="radiosexo" value="F" type="radio"> Feminino
                                                  <input class="radio texteditone" name="radiosexo" value="M" type="radio"> Masculino

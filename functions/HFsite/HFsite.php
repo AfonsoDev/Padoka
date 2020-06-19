@@ -15,14 +15,12 @@
                                     <li class='itemMenu'><a href='promacao.php'>Promoções</a></li>
                                     <li class='itemMenu'><a href='produto.php'>Produto Mês</a></li>
                                 </ul>
-                        </div>
+                            </div>
                     </nav> 
                     <div class='logo'>
-                        <a href='index.php'><img src='img/logo/logo.png'></a>
+                        <a href='index.php'><img src='img/logo/logo.png' alt='Logo'></a>
                     </div>
-                    <div class='iconeMenulogin modal-btn'>
-                        
-                    </div>
+                    <div class='iconeMenulogin modal-btn'></div>
                     <nav id='menu'>
                         <ul id='menuitem'>
                             <li class='menulista textBuild'> 
@@ -47,19 +45,19 @@
                     </nav>
                     
                    <div class='formluario_Entrar'>
-                        <form method='POST' class='' name=''>  
+                        <form method='POST' class='' name='frm_entrar'>  
                             <div class=''>
                                 <div class='form-group'>
                                     <div>
                                         <label>Usuario:</label>
                                     </div>
-                                <input type='text' name='' class='inputedit' placeholder='Usuario'>
+                                <input type='text' name='txtusuario' class='inputedit' placeholder='Usuario'>
                             </div>
                             <div class='form-group'>
                                 <div>
                                     <label>Senha:</label>
                                 </div>
-                                    <input type='password' name='' class='inputedit' placeholder='Senha'>
+                                    <input type='password' name='txtsenha' class='inputedit' placeholder='Senha'>
                             </div>
                                     <input type='submit' value='Ok' class='btn_Entrar'>
                             </div>
@@ -91,14 +89,17 @@
             $navbarleft="
         <div class='scrollbar'>
             <div class='container'>
-                <div class='menulefticon'>
+               <div class='submenuleftmobile'>
                     <nav class='submenu'>
                         <ul class='submenuitem'>
                             <li class='submenulist texteedit'>ITEM</li>
-
+                            <li class='submenulist texteedit'>ITEM</li>
+                            <li class='submenulist texteedit'>ITEM</li>
+                            <li class='submenulist texteedit'>ITEM</li>
+                            <li class='submenulist texteedit'>ITEM</li>
                         </ul>
                     </nav>
-                </div>
+               </div>
             </div>
         </div>
             ";
@@ -125,12 +126,12 @@
         function divProdutoPao(){
             $pao="
                  <div class='card'>
+                 <div class=' py-2 bb textDefault'>Pão Francês </div>
                     <div class='imgCenter'>
-                        <img src='img/pao.jpeg' alt='Pao' height='200px' width='200'>
+                        <img src='img/pao.jpeg' alt='Pao' height='170' width='190'>
                     </div>
-                    <div class='textDefault'>Nome: </div>
-                    <div class='textDefault'>Descrição: </div>
-                    <div class='textDefault'>Preço: </div>
+                    <div class='py-2 bt textDefault'>Pão francês  na frança se chama pão daqui?</div>
+                    <div class='textDefault'>R$ 1,50 Reais </div>
                     <div class='text-center'><a href='#' class='botao botao1'>Comprar</a></div>
                 </div>
             ";

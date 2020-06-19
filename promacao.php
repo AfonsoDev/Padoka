@@ -21,8 +21,14 @@
     </head>
 <body>         
     <?php echo(cabecalho());?>
-         <header> </header>
-         <section>
+         <header> 
+            <div class="bg-fundo-promocao">
+                <div class="bg-letra-promocao">
+                
+                </div>
+            </div>
+         </header>
+         <div>
              <div class="container">
                  <div id="containerProdutoDestaque">
                         
@@ -31,12 +37,12 @@
                      <div class="produtoSecundario"></div>
                  </div>
              </div>
-         </section>
+         </div>
          <div id="titulo"><h2 class="container h2-titulo">Promoções</h2></div>
-         <section id="containerPromocaoDoDia">
+         <div id="containerPromocaoDoDia">
              <?php echo (pmProduto());?>
              <?php echo (pmProduto());?>
-         </section>
+         </div>
          <?php echo(rodape());?>
     </body>
 </html>

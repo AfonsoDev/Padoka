@@ -21,8 +21,14 @@
     </head>
 <body>         
     <?php echo(cabecalho());?>
-         <header> </header>
-         <section>
+         <header> 
+                <div class="bg-fundo">
+                    <div class="bg-letra">
+                    
+                    </div>
+                </div>
+         </header>
+         <div>
              <div class="container">
                  <div id="containerProdutoDestaque">
                         
@@ -31,12 +37,12 @@
                      <div class="produtoSecundario"></div>
                  </div>
              </div>
-         </section>
+         </div>
          <div id="titulo"><h2 class="container h2-titulo">Produto do Mês</h2></div>
-         <section id="containerPromocaoDoDia">
+         <div id="containerPromocaoDoDia">
              <?php echo (pdmes());?>
              <?php echo (pdmes());?>
-         </section>
+         </div>
          <?php echo(rodape());?>
          <div class="bg-modal" id="modal">
             <div class="modal">

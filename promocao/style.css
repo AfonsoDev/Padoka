@@ -12,11 +12,58 @@
         margin-right: auto; 
     }
     header{
-        background-color: purple;
         height: 400px;
         width: 100%;
     }
-    
+    .bg-fundo{
+        height: 400px;
+        width: 100%;
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .bg-letra{
+        width: 582px;
+        height: 307px;
+        margin-right: auto;
+        margin-left: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(img/BG-LOGOWPP.png);
+        transition: 1s;
+        background-size: 400px;
+    }
+    .bg-letra:hover{
+        transform: rotate(10deg);
+        background-size: 300px;
+        transition: 1s;
+        cursor: pointer;
+    }
+    .bg-fundo-promocao{
+        background-position: center;
+        height: 400px;
+        width: 100%;
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+    }
+    .bg-letra-promocao{
+        width: 582px;
+        height: 307px;
+        margin-right: auto;
+        margin-left: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(img/BG-LOGOWPPPM.png);
+        transition: 1s;
+        background-size: 400px;
+
+    }
+    .bg-letra-promocao:hover{
+        transform: rotate(10deg);
+        background-size: 300px;
+        transition: 1s;
+        cursor: pointer;
+    }
     #containerProdutoDestaque{
         height: 500px;
         width: 100%;
@@ -53,7 +100,7 @@
         min-height: 250px;
         height: auto;
         width: 100%;
-        background-color: gray;
+        background-color: #5A616E;
         overflow: hidden;
         padding: 20px;
         padding-top: 30px;
@@ -63,7 +110,7 @@
     .promocaoDia{
         height: 330px;
         width: 250px;
-        background-color: rgb(173, 128, 4);
+        background-color: rgb(170, 170, 170);
         margin-right: 20px;
         float: left;
     }

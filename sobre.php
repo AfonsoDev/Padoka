@@ -30,9 +30,9 @@
             </div>
         </div>
     </header>
-    <section class="container">
-        <div class="">
-            <div class="textSobre text-center py-4">Informações Sobre</div>
+    <section>
+        <div class="container">
+            <h3 class="textSobre text-center py-4">Informações Sobre</h3>
             <div class="conteudoSobre">
                 <div class="textSobre">
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem repellendus quibusdam nobis provident atque earum, expedita temporibus molestias suscipit vitae ex consequuntur harum illo, labore ratione doloribus cupiditate nesciunt!</p>

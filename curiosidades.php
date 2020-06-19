@@ -24,17 +24,17 @@
       <?php echo (cabecalho());?>
                 <!-- FIM DO MENU -->
         <div class="itensEmDestaque">
-            <section class="container">
+            <div class="container">
                 <div class="propaganda"></div>
                 <div class="noticia"></div>
                 <div class="empresa"></div>
                 <div class="novidade"></div>
-            </section>
+            </div>
         </div>
         <div class="containerEmpresa">
-            <section class='container'>
+            <div class='container'>
                 <div class='curiosidades'></div>
-            </section>
+            </div>
         </div>
                 <!-- Inicio do rodape -->
         <?php echo(rodape()); ?>
