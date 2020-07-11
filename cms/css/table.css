@@ -6,14 +6,17 @@
 .table-basic td, .table-basic th{
     border: 1px solid #dddd;
     padding: 8px;
+    min-width: 120px;
 }
-.table-basic tr:nth-child(even){background-color: #f2f2f2;}
+.table-basic tr{background-color: #f2f2f2;}
+
 .table-basic tr:hover {background-color: #ddd;}
+
 .table-basic th{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: teal;
+    background-color: rgba(0, 152, 199, 0.867);
     color: white;
 }
 .table-container{

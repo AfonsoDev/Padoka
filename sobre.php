@@ -1,6 +1,7 @@
 <?php 
     require_once("functions/HFsite/HFsite.php");
-
+    require_once('bd/conexao.php');
+    $conex = conexaoMysql();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,26 +34,29 @@
     <section>
         <div class="container">
             <h3 class="textSobre text-center py-4">Informações Sobre</h3>
+
+            <?php
+                $sql="select tblSobre.* from tblSobre";
+                $selectSobre = mysqli_query($conex, $sql);
+
+                while($rsSobre = mysqli_fetch_assoc($selectSobre)){
+                    $texto = $rsSobre['texto'];
+                    $img = $rsSobre['img'];
+                
+            ?>
+
             <div class="conteudoSobre">
+                <div class="imgsobre-bd">
+                    <img class="imgsize" src="bd/cms/arquivo/<?=$rsSobre['img']?>" alt="">
+                </div>
+
                 <div class="textSobre">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem repellendus quibusdam nobis provident atque earum, expedita temporibus molestias suscipit vitae ex consequuntur harum illo, labore ratione doloribus cupiditate nesciunt!</p>
+                    <p><?=$texto?></p>
                 </div>
             </div>
-            <div class="conteudoSobre">
-                <div class="textSobre">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem repellendus quibusdam nobis provident atque earum, expedita temporibus molestias suscipit vitae ex consequuntur harum illo, labore ratione doloribus cupiditate nesciunt!
-                </div>
-            </div>
-            <div class="conteudoSobre">
-                <div class="textSobre">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem repellendus quibusdam nobis provident atque earum, expedita temporibus molestias suscipit vitae ex consequuntur harum illo, labore ratione doloribus cupiditate nesciunt!
-                </div>
-            </div>
-            <div class="conteudoSobre">
-                <div class="textSobre">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem repellendus quibusdam nobis provident atque earum, expedita temporibus molestias suscipit vitae ex consequuntur harum illo, labore ratione doloribus cupiditate nesciunt!
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </section>
     <?php echo(rodape());?>

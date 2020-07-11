@@ -1,3 +1,7 @@
+<?php
+
+$action = "../bd/Cms/inserirCuriosidade.php?modo=inserir";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,6 +10,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <title>Padoka | Admin | CMS</title>
 </head>
+<style>
+
+</style>
 <body>
     <div class="main">
         <section class="container">
@@ -58,7 +65,19 @@
         </header>
         <div class="container">
             <div class="containerItens">
-                <h1 class="bemvindo">BEM-VINDO AO SISTEMAS ADMINISTRATIVO DE GERENCIAMENTO </h1>   
+                <div class="containerFormUsuario btn-align">
+                        <form method="post" class="" action="<?=$action?>" enctype="multipart/form-data">
+                        <div class="rgtPerm">Conteúdo Curiosidade</div>
+                            <span class="text-left">Imagem 1</span>
+                            <input type="file" name="txtfile1" class="formInputCms" value="" id="">
+                            <span class="text-left">Imagem 2</span>
+                            <input type="file" name="txtfile2" class="formInputCms" value="" id="">
+                            <span class="text-left">Imagem 3</span>
+                            <input type="file" name="txtfile3" class="formInputCms" value="" id="">
+                            <input type="text" name="txttexto" class="formInput" placeholder="Insira o texto" value="" id="">
+                            <input type="submit" class="btn btn-primary" name="btnEnviar" value="Registrar">
+                        </form>
+                </div> 
             </div>
         </div>
     </div>

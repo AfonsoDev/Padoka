@@ -15,7 +15,7 @@ const masks = {
         },
     name(value){
         return value
-        .replace(/\d/g, '')
+        .replace(/\d/g, '') 
     }
 
 }

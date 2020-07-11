@@ -1,5 +1,9 @@
 <?php 
     require_once("functions/HFsite/HFsite.php");
+
+    require_once('bd/conexao.php');
+    $conex = conexaoMysql();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,22 +34,29 @@
         <div class="container">
             <section class="containerlojas">
                     <div class="text-loja-h3">Nossas Lojas</div>
+                    <?php
+            $sql=" select tblLojas.*
+                    from tblLojas";
+                $selectLojas = mysqli_query($conex, $sql);
+
+                while($rsLojas = mysqli_fetch_assoc($selectLojas)){
+                    $idLoja = $rsLojas['idLoja'];
+                    $loca = $rsLojas['localizacao'];
+                    $tel = $rsLojas['telefone'];
+                    $google = $rsLojas['googleMaps'];
+        ?>
                     <div class="loja">
                         <div class="lojaImg">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9979962949033!2d-46.85537938447688!3d-23.49658166508956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf023b22cf86e7%3A0x6df73abd41df9558!2sCentro%20Comercial%20Alphaville!5e0!3m2!1spt-BR!2sbr!4v1584453251623!5m2!1spt-BR!2sbr" class="lojaiframe" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            <iframe src="<?=$google?>" class="lojaiframe" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="lojaText text-center">
-                            <h4> LOCALIZAÇÃO / TELEFONE</h4>
+                             <?=$loca?> - <?=$tel?> 
                         </div>
+                        <?php
+                        }
+                        ?>
                     </div>
-                    <div class="loja">
-                        <div class="lojaImg">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9979962949033!2d-46.85537938447688!3d-23.49658166508956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf023b22cf86e7%3A0x6df73abd41df9558!2sCentro%20Comercial%20Alphaville!5e0!3m2!1spt-BR!2sbr!4v1584453251623!5m2!1spt-BR!2sbr" class="lojaiframe" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                        <div class="lojaText text-center">
-                            <h4> LOCALIZAÇÃO / TELEFONE </h4>
-                        </div>
-                    </div>
+
             </section>
         </div>    
         <?php echo(rodape());?>
