@@ -135,8 +135,24 @@ h2{
     font-size: 20px;
     text-align: justify;
 }
+.text-curiosidade{
+    font-weight: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: justify;
+}
 
 @media screen and (min-device-width:1300px){
+    .imgwarpoper{
+        width: 600px;
+        height: 450px;
+        border-radius: 15px;
+    }
+    .imgwarpope{
+        width: 550px;
+        height: 200px;
+        border-radius: 15px;
+    }
     /* INICIO DOS SLIDES */
 :root{
     --width-slide:60vw;
@@ -498,7 +514,6 @@ h2{
         cursor: pointer;
     }
     .noticia{
-        background-color: blueviolet;
         width: 600px;
         height: 450px;
         margin-top: 15px;
@@ -523,7 +538,6 @@ h2{
         cursor: pointer;
     }
     .empresa{
-        background-color: brown;
         width: 550px;
         height: 200px;
         float: right;
@@ -537,7 +551,6 @@ h2{
         cursor: pointer;
     }
     .novidade{
-        background-color: brown;
         width: 550px;
         height: 200px;
         float: right;
@@ -699,6 +712,14 @@ h2{
     /* Final do MODAL */
 }
 @media screen and (max-device-width:780px){
+    .imgwarpoper{
+        width: 100%;
+        height: 450px;  
+    }
+    .imgwarpope{
+        width: 100%;
+        height: 255px;
+    }
 #containerMenu{
     width: 100%;
     background-image: linear-gradient(to right, rgba(3, 112, 175, 0.952) , rgba(3, 90, 221, 0.952));

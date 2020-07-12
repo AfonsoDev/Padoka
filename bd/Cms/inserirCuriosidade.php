@@ -45,8 +45,8 @@
                                     $arquivoTemp3 = $_FILES['txtfile3']['tmp_name'];
         
                                     if(move_uploaded_file($arquivoTemp, $diretorioArquivo.$foto)){
-                                        if(move_uploaded_file($arquivoTemp2, $diretorioArquivo2.$foto2)){
-                                            if(move_uploaded_file($arquivoTemp3, $diretorioArquivo3.$foto3)){
+                                        if(move_uploaded_file($arquivoTemp2, $diretorioArquivo.$foto2)){
+                                            if(move_uploaded_file($arquivoTemp3, $diretorioArquivo.$foto3)){
                                                 $sql="insert into tblCuriosidade (imagemPrincipal,imagemSegundario,imagemTerceiro,texto) values('".$foto."','".$foto2."','".$foto3."','".$texto."')";
             
                                                 if(mysqli_query($conex, $sql))

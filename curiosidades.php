@@ -22,6 +22,7 @@
     <title>Curiosidade</title>
 </head>
 <style>
+    
 </style>
     <body>
                 <!--INICIO DO MENU-->
@@ -37,6 +38,7 @@
                     $img2 = $rsListCuriosidade['imagemSegundario'];
                     $img3 = $rsListCuriosidade['imagemTerceiro'];
                 }
+                
             ?>
             <div class="container">
                 <div class="propaganda"></div>
@@ -44,16 +46,18 @@
                     <img class="imgwarpoper" src="bd/cms/arquivo/<?=$img1?>" alt="">
                 </div>
                 <div class="empresa">
-                    <img class="" src="bd/cms/arquivo/<?=$img2?>" alt="">
+                    <img class="imgwarpope" src="bd/cms/arquivo/<?=$img2?>" alt="">
                 </div>
                 <div class="novidade">
-                    <img class="" src="bd/cms/arquivo/<?=$img3?>" alt="">
+                    <img class="imgwarpope" src="bd/cms/arquivo/<?=$img3?>" alt="">
                 </div>
             </div>
         </div>
         <div class="containerEmpresa">
             <div class='container'>
-                <div class='curiosidades'><?=$texto?></div>
+                <div class='curiosidades'>
+                    <h3 class="text-curiosidade"><?=$texto?><h3>
+                </div>
             </div>
         </div>
                 <!-- Inicio do rodape -->
