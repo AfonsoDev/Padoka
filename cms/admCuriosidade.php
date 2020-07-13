@@ -1,10 +1,32 @@
 <?php
 
+$TextoCuriosidade = null;
 $action = "../bd/Cms/inserirCuriosidade.php?modo=inserir";
 require_once('function.php');
 
 require_once('../bd/conexao.php');
 $conex = conexaoMysql();
+
+    if(isset($_GET['modo'])){
+        if($_GET['modo'] == 'consultaEditar'){
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                $sql="select tblCuriosidade.* 
+                from tblCuriosidade";
+                
+                $selectCuriosidade = mysqli_query($conex, $sql);
+                if($rsListCuriosidade = mysqli_fetch_assoc($selectCuriosidade)){
+                    $idCuriosidade = $rsListCuriosidade['idCuriosidade'];
+                    $ImagemPrincipalCuriosidade = $rsListCuriosidade['imagemPrincipal'];
+                    $ImagemSegundariaCuriosidade = $rsListCuriosidade['imagemSegundario'];
+                    $ImagemTerceiraCuriosidade = $rsListCuriosidade['imagemTerceiro'];
+                    $TextoCuriosidade = $rsListCuriosidade['texto'];
+                    $action = "../bd/Cms/updateadmCuriosidade.php?modo=atualizar&id=" . $rsListCuriosidade['idCuriosidade'];
+                }
+
+            }
+        }
+    }
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +62,7 @@ $conex = conexaoMysql();
         <div class="container">
             <div class="containerItens">
                 <div class="containerFormUsuario btn-align">
-                        <form method="post" class="" action="<?=$action?>" enctype="multipart/form-data">
+                        <form method="POST" class="" action="<?=$action?>" enctype="multipart/form-data">
                         <div class="rgtPerm">Conteúdo Curiosidade</div>
                             <span class="text-left">Imagem 1</span>
                             <input type="file" name="txtfile1" class="formInputCms" value="" id="">
@@ -48,7 +70,7 @@ $conex = conexaoMysql();
                             <input type="file" name="txtfile2" class="formInputCms" value="" id="">
                             <span class="text-left">Imagem 3</span>
                             <input type="file" name="txtfile3" class="formInputCms" value="" id="">
-                            <input type="text" name="txttexto" class="formInput" placeholder="Insira o texto" value="" id="">
+                            <input type="text" name="txttexto" class="formInput" placeholder="Insira o texto" value="<?=$TextoCuriosidade?>" id="">
                             <input type="submit" class="btn btn-primary" name="btnEnviar" value="Registrar">
                         </form>
                 </div> 
@@ -64,7 +86,7 @@ $conex = conexaoMysql();
                     </tr>
                     <?php
                         $sql="select tblCuriosidade.* 
-                              from tblCuriosidade;";
+                              from tblCuriosidade";
                             $selectNivel = mysqli_query($conex, $sql);
                             while($rsCuriosidades = mysqli_fetch_assoc($selectNivel)){
 
